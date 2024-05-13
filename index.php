@@ -1,4 +1,4 @@
-<?php include "include/header.php" ?>
+<?php include "parts/header.php" ?>
     <style>  
     footer{
       margin-top: 10px;

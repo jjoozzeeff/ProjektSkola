@@ -56,7 +56,7 @@ session_start();
         </div>
         <ul class="navbar-nav">
           <li class="nav-item">
-             <a class="nav-link" href="cart.php">Košík</a>
+             <a class="nav-link" href="kosik.php">Košík</a>
           </li>
         </ul>
       </div>
