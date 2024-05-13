@@ -1,5 +1,5 @@
 <?php 
-include "include/header.php";
+include "parts/header.php";
 if (!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = array();
 }
@@ -102,4 +102,4 @@ if (isset($_GET['add_to_cart'])) {
     }
     ?>
 </div>
-<?php include "include/footer.php"?>
+<?php include "parts/footer.php"?>

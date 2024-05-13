@@ -1,4 +1,4 @@
-<?php include "include/header.php" ?>
+<?php include "parts/header.php" ?>
 
 <!--formulár-->
       <div class="container py-5">
@@ -29,5 +29,5 @@
 
       </form>
     </div>
-<?php include "include/footer.php" ?>
+<?php include "parts/footer.php" ?>
       

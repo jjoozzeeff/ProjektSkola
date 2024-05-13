@@ -1,5 +1,5 @@
 <?php 
-include "include/header.php";
+include "parts/header.php";
 $kosikDetailProduktu = [];
  
 if (isset($_SESSION['cart']) && !empty($_SESSION['cart']))
@@ -61,4 +61,4 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart']))
         <p>Váš košík je prázdny</p>
     <?php endif; ?>
 </div>
-<?php include "include/footer.php"?>
+<?php include "parts/footer.php"?>
