@@ -290,3 +290,7 @@ form{
   font-weight: 600;
   margin-top: 150px;
 }
+.cart-empty{
+  text-align: center;
+  font-weight: 700;
+}

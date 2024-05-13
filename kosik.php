@@ -30,10 +30,11 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
     }
 </style>
 <div class="container mt-3">
-    <div class="cart-header">
-        <h2>Váš nákupný košík</h2>
-    </div>
+
     <?php if (!empty($kosikDetailProduktu)): ?>
+        <div class="cart-header">
+            <h2>Váš nákupný košík</h2>
+        </div>
         <?php foreach ($kosikDetailProduktu as $product): ?>
             <div class="row cart-item">
                 <div class="col-md-2">
@@ -59,7 +60,14 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
             </div>
         </div>
     <?php else: ?>
-        <p>Váš košík je prázdny</p>
+        <div class="container cart-empty py-5">
+            <h1>Váš košík je prázdny</h1>
+            <a href= "obchod.php">
+                <button class="btn btn-primary btn-lg">
+                    Pokračovať v nákupe
+                </button>
+            </a>
+        </div>
     <?php endif; ?>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
