@@ -2,7 +2,7 @@
 include "parts/header.php";
 $kosikDetailProduktu = [];
  
-if (isset($_SESSION['cart']) && !empty($_SESSION['cart']))
+if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
     $placeholder = implode(',', array_fill(0, count($_SESSION['cart']), '?'));
     try {
         $stmt = $conn->prepare("SELECT * FROM produkty WHERE id IN ($placeholder)");
@@ -11,6 +11,7 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart']))
     } catch(PDOException $e) {
         echo "Poziadavka zlyhala: " . $e->getMessage();
     }
+}
 ?>
 <style>
     .cart-item {
@@ -48,7 +49,7 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart']))
                 </div>
  
                 <div class="col-md-2">
-                    <button class="btn btn-danger btn-sm btn-remove mt-2">Vymazať</button>
+                    <button class="btn btn-danger btn-sm btn-remove mt-2" data-product-id=<?=$product['ID'] ?>>Vymazať</button>
                 </div>
             </div>
         <?php endforeach; ?>
@@ -61,4 +62,20 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart']))
         <p>Váš košík je prázdny</p>
     <?php endif; ?>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).ready(function(){
+        $('.btn-remove').click (function(){
+            var productId = $(this).data('product-id');
+            $.ajax({
+                url:'backend/odstranit_z_kosika.php',
+                type: 'POST', 
+                data:{ product_id: productId },
+                success: function(result) {
+                    window.location.reload();
+                }
+            });
+        });
+    });
+</script>
 <?php include "parts/footer.php"?>
