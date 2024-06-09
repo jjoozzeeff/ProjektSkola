@@ -49,4 +49,14 @@ class Shop
             echo '</div>';
         }
     }
+
+    public function removeFromCart($productId)
+    {
+        if (isset($_SESSION['cart']) && ($key = array_search($productId, $_SESSION['cart'])) !== false) {
+            unset($_SESSION['cart'][$key]);
+            $_SESSION['cart'] = array_values($_SESSION['cart']);
+            return true;
+        }
+        return false;
+    }
 }
