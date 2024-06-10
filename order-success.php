@@ -18,7 +18,7 @@ $_SESSION['cart'] = [];
     <ul>
         <?php
         foreach ($cartDetails as $product) {
-            echo '<li>' . htmlspecialchars($product['Nazov']) . ' - ' . htmlspecialchars($product['Cena']) . ' €</li>';
+            echo '<li>' . htmlspecialchars($product['name']) . ' - ' . htmlspecialchars($product['price']) . ' €</li>';
         }
         ?>
     </ul>
