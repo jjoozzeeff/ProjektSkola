@@ -33,12 +33,12 @@ class Shop
 
             echo '<div class ="col-lg-3">';
             echo    '<div class="card" style="width: 18rem;">';
-            echo        '<img class="card-img-top" src="' . $row["img"] . '" alt="Card image cap">';
+            echo        '<img class="card-img-top" src="' . $row["image_path"] . '" alt="Card image cap">';
             echo        '<div class="card-body">';
-            echo            '<h5 class="card-title">' . $row["Nazov"] . '</h5>';
-            echo            '<p class="card-text">' . $row["popis"] . '</p>';
-            echo                '<p class="card-text">' . $row["Cena"] . ' €</p>';
-            echo            '<a href="?add_to_cart=' . $row["ID"] . '" class="btn btn-success">Kúpiť</a>';
+            echo            '<h5 class="card-title">' . $row["name"] . '</h5>';
+            echo            '<p class="card-text">' . $row["description"] . '</p>';
+            echo                '<p class="card-text">' . $row["price"] . ' €</p>';
+            echo            '<a href="?add_to_cart=' . $row["id"] . '" class="btn btn-success">Kúpiť</a>';
             echo        '</div>';
             echo    '</div>';
             echo '</div>';

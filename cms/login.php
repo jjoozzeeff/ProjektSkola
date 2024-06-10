@@ -14,12 +14,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <div class="container p-5">
     <form class="p-5" style="background-color: white; border-radius: 10px;" method="POST" action="">
         <div class="mb-3">
-            <label for="username" class="form-label">Username</label>
+            <label for="username" class="form-label">Meno</label>
             <input type="text" class="form-control" id="username" name="username" aria-describedby="usernameHelp" style="background-color: #ededed;">
-            <div id="usernameHelp" class="form-text">We'll never share your username with anyone else.</div>
         </div>
         <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
+            <label for="password" class="form-label">Heslo</label>
             <input type="password" class="form-control" id="password" name="password" style="background-color: #ededed;">
         </div>
         <?php if ($error) : ?>
@@ -27,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <?php echo htmlspecialchars($error); ?>
             </div>
         <?php endif; ?>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Potvrdiť</button>
     </form>
 </div>
 <?php include "parts/footer.php"; ?>

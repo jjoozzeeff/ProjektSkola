@@ -51,25 +51,25 @@ class Cart
             foreach ($kosikDetailProduktu as $product) {
                 echo '<div class="row cart-item">
                 <div class="col-md-2">
-                    <img src="' . htmlspecialchars($product['img']) . '" alt="Obrázok produktu" class="card-image ">
+                    <img src="' . htmlspecialchars($product['image_path']) . '" alt="Obrázok produktu" class="card-image ">
                 </div>
  
                 <div class="col-md-5">
-                    <h5 class="mt-2">' . htmlspecialchars($product['Nazov']) . '</h5>
+                    <h5 class="mt-2">' . htmlspecialchars($product['name']) . '</h5>
                 </div>
  
                 <div class="col-md-3 card-price">
-                    <p class="mt-2">' . htmlspecialchars($product['Cena']) . '</p>
+                    <p class="mt-2">' . htmlspecialchars($product['price']) . '</p>
                 </div>
  
                 <div class="col-md-2">
-                    <button class="btn btn-danger btn-sm btn-remove mt-2" data-product-id="' . htmlspecialchars($product['ID']) . '">Vymazať</button>
+                    <button class="btn btn-danger btn-sm btn-remove mt-2" data-product-id="' . htmlspecialchars($product['id']) . '">Vymazať</button>
                 </div>
             </div>';
             }
             echo ' <div class="row">
         <div class="col-12 text-right">
-            <h4 class="cart-total">Celková suma: ' . htmlspecialchars(array_sum(array_column($kosikDetailProduktu, 'Cena'))) . ' €</h4>
+            <h4 class="cart-total">Celková suma: ' . htmlspecialchars(array_sum(array_column($kosikDetailProduktu, 'price'))) . ' €</h4>
         </div>
     </div>';
         }

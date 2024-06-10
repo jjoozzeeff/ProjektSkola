@@ -17,7 +17,7 @@ class OrderManager
             echo '<table class="table table-striped">';
             echo '<thead>';
             echo '<tr>';
-            echo '<th scope="col">Order ID</th>';
+            echo '<th scope="col">ID objednávky</th>';
             echo '<th scope="col">Meno</th>';
             echo '<th scope="col">Priezvisko</th>';
             echo '<th scope="col">Ulica</th>';

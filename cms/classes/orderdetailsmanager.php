@@ -23,22 +23,22 @@ class OrderDetailsManager
         }
 
         echo '<div class="container py-5">';
-        echo '<h1>Order Details</h1>';
-        echo '<h2>Order ID: ' . htmlspecialchars($orderId) . '</h2>';
-        echo '<h3>Order Date: ' . htmlspecialchars($orderInfo['datum_objednavky']) . '</h3>';
-        echo '<h3>Customer Details:</h3>';
-        echo '<p>Name: ' . htmlspecialchars($orderInfo['meno'] . ' ' . $orderInfo['priezvisko']) . '</p>';
-        echo '<p>Address: ' . htmlspecialchars($orderInfo['ulica'] . ' ' . $orderInfo['cislo_domu'] . ', ' . $orderInfo['mesto']) . '</p>';
-        echo '<p>Phone Number: ' . htmlspecialchars($orderInfo['telefon_cislo']) . '</p>';
+        echo '<h1>Detaily objednávky</h1>';
+        echo '<h2>ID objednávky: ' . htmlspecialchars($orderId) . '</h2>';
+        echo '<h3>Dátum objednávky: ' . htmlspecialchars($orderInfo['datum_objednavky']) . '</h3>';
+        echo '<h3>Detaily zákazníka:</h3>';
+        echo '<p>Meno: ' . htmlspecialchars($orderInfo['meno'] . ' ' . $orderInfo['priezvisko']) . '</p>';
+        echo '<p>Adresa: ' . htmlspecialchars($orderInfo['ulica'] . ' ' . $orderInfo['cislo_domu'] . ', ' . $orderInfo['mesto']) . '</p>';
+        echo '<p>Tel. číslo: ' . htmlspecialchars($orderInfo['telefon_cislo']) . '</p>';
         echo '<p>Email: ' . htmlspecialchars($orderInfo['email']) . '</p>';
 
         if (!empty($orderDetails)) {
             echo '<table class="table table-striped">';
             echo '<thead>';
             echo '<tr>';
-            echo '<th scope="col">Product ID</th>';
-            echo '<th scope="col">Name</th>';
-            echo '<th scope="col">Price</th>';
+            echo '<th scope="col">ID produktu</th>';
+            echo '<th scope="col">Názov</th>';
+            echo '<th scope="col">Cena</th>';
             echo '</tr>';
             echo '</thead>';
             echo '<tbody>';
